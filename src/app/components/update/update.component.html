@@ -1,0 +1,12 @@
+<div class="mx-auto col-7">
+  <h1>Update Departamento</h1>
+  <div class="card">
+    <form #createForm="ngForm">
+      <input type="number" disabled value={{departamento.idDepartamento}} name="cajaid" #cajaid placeholder="idDepartamento" class="form-control">
+      <input type="text" value={{departamento.nombre}} name="cajanombre" #cajanombre placeholder="nombre" class="form-control">
+      <input type="text" value={{departamento.localidad}} name="cajalocalidad" #cajalocalidad placeholder="localidad" class="form-control">
+      <button  (click)="updateDepartamento()" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</div>
+

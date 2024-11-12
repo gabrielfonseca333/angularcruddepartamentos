@@ -3,8 +3,8 @@
   <div class="card">
     <form #createForm="ngForm">
       <input type="number" name="cajaid" #cajaid placeholder="idDepartamento" class="form-control">
-      <input type="number" name="cajanombre" #cajanombre placeholder="nombre" class="form-control">
-      <input type="number" name="cajalocalidad" #cajalocalidad placeholder="localidad" class="form-control">
+      <input type="text" name="cajanombre" #cajanombre placeholder="nombre" class="form-control">
+      <input type="text" name="cajalocalidad" #cajalocalidad placeholder="localidad" class="form-control">
       <button  (click)="crearDepartamento()" class="btn btn-primary">Crear</button>
     </form>
   </div>

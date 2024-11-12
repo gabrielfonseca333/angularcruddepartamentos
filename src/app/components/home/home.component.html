@@ -1,21 +1,34 @@
 <div>
   <h1>Home</h1>
 
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>localidad</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let departamento of departamentos">
-        <td>{{departamento.idDepartamento}}</td>
-        <td>{{departamento.nombre}}</td>
-        <td>{{departamento.localidad}}</td>
-        <td>
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>localidad</th>
+          <th></th>
+          <th></th>
         </tr>
-    </tbody>
-    </table>
+      </thead>
+      <tbody>
+        <tr *ngFor="let departamento of departamentos">
+          <td>{{departamento.idDepartamento}}</td>
+          <td>{{departamento.nombre}}</td>
+          <td>{{departamento.localidad}}</td>
+          <td>
+            <a [routerLink]="['/details', departamento.idDepartamento, departamento.nombre, departamento.localidad]">Details</a>
+          </td>
+          <td>
+            <a class="btn btn-primary" [routerLink]="['/update', departamento.idDepartamento]">Update</a>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteDepartamento(departamento.idDepartamento)">Delete</button>
+          </td>
+          </tr>
+      </tbody>
+      </table>
+  </div>
+  
 </div>
